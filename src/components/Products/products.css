@@ -1,4 +1,3 @@
-
 .product-section {
   position: relative !important;
   background-image: var(--section-gradient) !important;
@@ -20,6 +19,7 @@
   height: 100% !important;
   padding: 10px 15px;
 }
+
 .product-card-view:hover {
   transform: scale(1.02) !important;
   overflow: hidden !important;
@@ -58,7 +58,7 @@
 }
 
 .card-img-top {
-  padding: 20px !important;
+  padding: 80px !important;
   opacity: 0.8 !important;
   border-radius: 10px !important;
 }

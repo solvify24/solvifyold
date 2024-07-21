@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProductCard from "./ProductCard";
-import chatify from "../../Assets/Projects/chatify.png";
+import chatify from "../../Assets/Projects/chatify.jpg";
 
 import "./products.css";
 
