@@ -1,0 +1,7 @@
+.approach-section {
+    color: white;
+}
+
+.approach-section .card {
+    min-height: 16em !important;
+}

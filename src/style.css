@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+
+html {
+  --image-gradient: linear-gradient(to bottom right, #14202b, #18142d);
+  --section-gradient: linear-gradient(to left, #101722, #100f22);
+
+  --imp-text-color: #04D9D9;
+  --color-light: #04D9D9;
+  --color-main: #15A0BF;
+  --color-dark: #0B4B59;
+}
+
+body {
+  margin: 0;
+  font-family: "Raleway", serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #070f1a;
+}
+
+.color-light {
+  color: var(--imp-text-color) !important;
+}
+
+button:focus {
+  box-shadow: none !important;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #2d1950;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(178, 121, 216, 0.959);
+  border-radius: 12px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(222, 130, 235, 0.911);
+  border-radius: 12px;
+}
+
+.section {
+  padding-top: 100px !important;
+  padding-bottom: 60px !important;
+  color: white;
+}
+
+.section-title {
+  font-size: 2.8em;
+  margin-bottom: 1em;
+}
+
+.section-description {
+  padding-bottom: 20px;
+  font-size: 1.2em;
+  text-align: left;
+}
+
+.card {
+  padding: 20px;
+  background-color: transparent;
+  border: none;
+}
+
+.card-body {
+	border-radius: 10px;
+  opacity: 0.93;
+  padding: 1.2em;
+  transition: all 0.4s ease 0s !important;
+  color: white;
+  height: 100%;
+  background-color: #111827 !important;
+  backdrop-filter: blur(15px) !important;
+}
+
+.card-title {
+  padding-bottom: 1em;
+}
+
+.card-body:hover {
+  transform: scale(1.05) !important;
+  overflow: hidden !important;
+}
+
+.card-border .card-body{
+  position: relative;
+	z-index: 0;
+	overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    animation: rotate 4s linear infinite;
+    z-index: -2;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 4px;
+    top: 4px;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    background: #111827;
+    border-radius: 5px;
+  }
+}
+
+.card-border:hover .card-body{
+  &::before {
+    background: conic-gradient(transparent, var(--color-light), transparent 30%);
+  }
+}
+
+.card-shadow .card-body:hover {
+  box-shadow: 0 0 8px 0 var(--color-light);
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+.social-section {
+  text-align: center !important;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  color: white !important;
+}
+
+.social-links {
+  justify-content: center !important;
+  padding-top: 15px !important;
+  display: inline-block !important;
+  position: relative !important;
+  padding-inline-start: 0 !important;
+}
+
+.social-icons .icon {
+  position: relative !important;
+  display: inline-block !important;
+  width: 40px !important;
+  height: 40px !important;
+  text-align: center !important;
+  font-size: 1.2em !important;
+  line-height: 2em !important;
+  background: white;
+  border-radius: 50% !important;
+  transition: 0.5s !important;
+}
+
+.social-icons .icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--color-light);
+  transition: 0.5s;
+  transform: scale(0.9);
+  z-index: -1;
+}
+
+.social-icons .icon:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px var(--color-light);
+}
+
+.social-icons .icon:hover {
+  color: var(--color-light);
+  box-shadow: 0 0 5px var(--color-light);
+  text-shadow: 0 0 2px var(--color-light);
+}
+
+.social-icons {
+  display: inline-block !important;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.icon-colour {
+  color: var(--color-main);
+}
