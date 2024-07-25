@@ -1,13 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
 
 html {
-  --image-gradient: linear-gradient(to bottom right, #14202b, #18142d);
-  --section-gradient: linear-gradient(to left, #101722, #100f22);
-
-  --imp-text-color: #04D9D9;
-  --color-light: #04D9D9;
-  --color-main: #15A0BF;
-  --color-dark: #0B4B59;
+  --home-bg: #004059;
+  --card-bg: #003b52;
+  --card-shadow: #636567;
+  --txt: #d5c06f;
 }
 
 body {
@@ -15,38 +12,20 @@ body {
   font-family: "Raleway", serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #070f1a;
 }
 
-.color-light {
-  color: var(--imp-text-color) !important;
+.color-main {
+  color: var(--txt) !important;
 }
 
 button:focus {
   box-shadow: none !important;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: #2d1950;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: rgba(178, 121, 216, 0.959);
-  border-radius: 12px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(222, 130, 235, 0.911);
-  border-radius: 12px;
-}
-
 .section {
-  padding-top: 100px !important;
-  padding-bottom: 60px !important;
-  color: white;
+  padding-top: 60px !important;
+  padding-bottom: 20px !important;
+  color: var(--txt-blue);
 }
 
 .section-title {
@@ -69,68 +48,21 @@ button:focus {
 .card-body {
   border-radius: 10px;
   opacity: 0.93;
-  padding: 1.2em;
-  transition: all 0.4s ease 0s !important;
-  color: white;
+  padding: 1.6em;
+  transition: all 0.4s ease 0s;
   height: 100%;
-  background-color: #111827 !important;
-  backdrop-filter: blur(15px) !important;
+  background-color: var(--card-bg);
+  color: var(--txt);
 }
 
 .card-title {
-  padding-bottom: 1em;
-}
-
-.card-body:hover {
-  transform: scale(1.05) !important;
-  overflow: hidden !important;
-}
-
-.card-border .card-body {
-  position: relative;
-  z-index: 0;
-  overflow: hidden;
-
-  &::before {
-    content: '';
-    position: absolute;
-    left: -50%;
-    top: -50%;
-    width: 200%;
-    height: 200%;
-    animation: rotate 4s linear infinite;
-    z-index: -2;
-    background-repeat: no-repeat;
-    background-position: 0 0;
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    left: 4px;
-    top: 4px;
-    width: calc(100% - 8px);
-    height: calc(100% - 8px);
-    background: #111827;
-    border-radius: 5px;
-  }
-}
-
-.card-border:hover .card-body {
-  &::before {
-    background: conic-gradient(transparent, var(--color-light), transparent 30%);
-  }
+  padding-top: 1em;
 }
 
 .card-shadow .card-body:hover {
-  box-shadow: 0 0 8px 0 var(--color-light);
-}
-
-@keyframes rotate {
-  100% {
-    transform: rotate(1turn);
-  }
+  overflow: hidden;
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px 4px var(--card-shadow);
 }
 
 .social-section {
@@ -138,6 +70,7 @@ button:focus {
   padding-top: 25px;
   padding-bottom: 25px;
   color: white !important;
+  background-color: var(--card-bg);
 }
 
 .social-links {
@@ -169,7 +102,7 @@ button:focus {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: var(--color-light);
+  background-color: var(--txt);
   transition: 0.5s;
   transform: scale(0.9);
   z-index: -1;
@@ -177,13 +110,13 @@ button:focus {
 
 .social-icons .icon:hover::before {
   transform: scale(1.1);
-  box-shadow: 0 0 15px var(--color-light);
+  box-shadow: 0 0 15px var(--txt);
 }
 
 .social-icons .icon:hover {
-  color: var(--color-light);
-  box-shadow: 0 0 5px var(--color-light);
-  text-shadow: 0 0 2px var(--color-light);
+  color: var(--txt);
+  box-shadow: 0 0 5px var(--txt);
+  text-shadow: 0 0 2px var(--txt);
 }
 
 .social-icons {
@@ -193,5 +126,86 @@ button:focus {
 }
 
 .icon-colour {
-  color: var(--color-main);
+  color: var(--card-bg);
+}
+
+/* section based */
+
+.home-header {
+  padding-top: 60px;
+}
+
+.home-section {
+  position: relative;
+  z-index: -1;
+  background-color: var(--home-bg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding-bottom: 30px !important;
+  padding-top: 30px !important;
+  min-height: 100vh;
+  padding-left: 50px !important;
+}
+
+.home-content {
+  padding: 9rem 0 2rem !important;
+  color: white;
+  text-align: left;
+}
+
+.heading {
+  font-size: 2.4em !important;
+}
+
+.heading-name {
+  font-size: 4em !important;
+}
+
+.heading-name .main-name {
+  color: var(--txt);
+}
+
+.about-section {
+  padding-top: 100px !important;
+}
+
+.product-section {
+  position: relative !important;
+}
+
+.product-card {
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+  padding-left: 25px !important;
+  padding-right: 25px !important;
+  height: auto !important;
+}
+
+.product-card-view:hover {
+  overflow: hidden !important;
+}
+
+.card-img-top {
+  border-radius: 10px;
+}
+
+.product-section .section-title {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.carousel-item {
+  padding: 20px 50px;
+}
+
+.carousel-inner {
+  height: 260px;
+}
+
+@media(min-width: 767px) {
+  .carousel-inner {
+    height: 200px;
+    padding: 20px 80px;
+
+  }
 }

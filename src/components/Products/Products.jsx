@@ -3,16 +3,14 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProductCard from "./ProductCard";
 import chatify from "../../Assets/Projects/chatify.jpg";
 
-import "./products.css";
-
 function Products() {
   return (
     <Container fluid className="product-section section" id="products">
       <Container>
-        <h1 className="product-heading">
+        <h1 className="section-title">
           Our <strong className="color-light">Products </strong>
         </h1>
-        <p style={{ color: "white" }}>
+        <p>
           Here are a few products we are working on recently.
         </p>
         <Row style={{ paddingBottom: "10px" }}>

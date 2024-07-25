@@ -1,8 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
-import "./about.css";
-
 function About() {
   return (
     <Container fluid className="about-section section" id="about">

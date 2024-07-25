@@ -1,12 +1,11 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import homeLogo from "../../Assets/home-main.svg";
-import "./home.css";
 
 function Home() {
   return (
-    <section id="Home">
-      <Container fluid className="home-section" id="home">
+    <section id="Home" className="home-section">
+      <Container fluid id="home">
         <Container className="home-content">
           <Row>
             <Col md={7} className="home-header">
