@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
 
 html {
-  --home-bg: #004059;
+  /* --home-bg: #004059;
   --card-bg: #003b52;
+  --card-shadow: #636567;
+  --txt: #d5c06f; */
+  --home-bg: #a395e9;
+  --card-bg: #c8c8d0;
   --card-shadow: #636567;
   --txt: #d5c06f;
 }
